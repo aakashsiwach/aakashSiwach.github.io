@@ -27,6 +27,7 @@ Animated, SEO-optimized personal portfolio built with **vanilla HTML, CSS & Java
 ├── .nojekyll               # serve assets/ untouched on Pages
 └── assets/
     ├── Aakash_Siwach_Resume.pdf  # downloadable resume
+    ├── Aakash_Siwach_Cover_Letter.pdf  # cover letter
     ├── css/style.css       # all styling + design tokens
     ├── js/main.js          # animations, nav, theme, terminal, easter eggs
     ├── js/games.js         # the three mini-games
