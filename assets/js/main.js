@@ -106,8 +106,8 @@
 
   /* ---------- Hero typing effect ---------- */
   const phrases = [
-    "scalable backends.", "payment gateways.", "no-code platforms.",
-    "clean APIs in Java.", "fast apps in React.", "things people use."
+    "scalable backends.", "AI-driven QA tools.", "payment gateways.",
+    "Spring Boot microservices.", "fast apps in React.", "teams that ship."
   ];
   const typedEl = $("#typed");
   if (typedEl && !reduceMotion) {
@@ -269,11 +269,11 @@
   };
   const commands = {
     help: () => `Available: <span class="pl">about, skills, experience, projects, social, school, game, clear, sudo, exit</span>`,
-    about: () => "Aakash Siwach — Full-Stack SDE, 4+ yrs. Java · Node · React · AWS. Based in Meerut, India.",
-    skills: () => "Java/Spring, Node.js, React/TS, AWS, Microservices, SQL+NoSQL, Docker, CI/CD.",
-    experience: () => "SDE I @ Innostax (2022–now) · Dev @ Paramarsh Informatics (2021–2022).",
-    projects: () => "New Era World School (live) · No-code backend · Banking backend · Travel platform.",
-    social: () => 'github.com/aakashSiwach · linkedin.com/in/aakashsiwach19',
+    about: () => "Aakash Siwach — Project Lead / SDE II, 5+ yrs. Java · Spring Boot · Python/FastAPI · React · AWS · AI agents. Based in Gurugram, India.",
+    skills: () => "Java/Spring Boot, Microservices, Python/FastAPI, React/TS, Node.js, Playwright, AI agents, MCP, AWS, SQL+NoSQL, Docker, CI/CD.",
+    experience: () => "SDE II / Project Lead @ Innostax (Jun 2025–now) · SDE I (2022–2025) · Associate SE (2022) · Paramarsh Informatics (2021–2022).",
+    projects: () => "Tendable (lead) · AI-driven QA Scanner · Bancstac payments · SafariNow · TravelStart · New Era World School (live).",
+    social: () => 'github.com/aakashsiwach · linkedin.com/in/aakashsiwach',
     school: () => 'I build & maintain → <a href="https://neweraworldschool.in/" target="_blank" rel="noopener">neweraworldschool.in</a>',
     game: () => { document.querySelector("#games").scrollIntoView({ behavior: "smooth" }); return "Loading games… 🎮"; },
     sudo: () => "Nice try 😏 — you don't have permission to hire yourself.",
