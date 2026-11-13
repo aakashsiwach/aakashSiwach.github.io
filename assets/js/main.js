@@ -75,17 +75,17 @@
     const trigger = new IntersectionObserver((entries, obs) => {
       entries.forEach(e => {
         if (!e.isIntersecting) return;
-        if (e.target.id === "skills") animateBars();
+        if (e.target.querySelector(".bar > span")) animateBars(e.target);
         if (e.target.querySelector("[data-count]")) animateCounts(e.target);
         obs.unobserve(e.target);
       });
     }, { threshold: 0.3 });
-    const skills = $("#skills"); if (skills) trigger.observe(skills);
+    ["#skills", "#codeatlas"].forEach(id => { const el = $(id); if (el) trigger.observe(el); });
     $$(".stats").forEach(s => trigger.observe(s));
   }
 
-  function animateBars() {
-    $$(".bar > span").forEach(s => { s.style.width = (s.dataset.w || 0) + "%"; });
+  function animateBars(scope = document) {
+    $$(".bar > span", scope).forEach(s => { s.style.width = (s.dataset.w || 0) + "%"; });
   }
   function animateCounts(scope = document) {
     $$("[data-count]", scope).forEach(el => {
@@ -104,9 +104,20 @@
     });
   }
 
+  /* ---------- Card spotlight (follows pointer) ---------- */
+  if (!reduceMotion && matchMedia("(hover: hover)").matches) {
+    $$(".card, .featured").forEach(el => {
+      el.addEventListener("pointermove", e => {
+        const r = el.getBoundingClientRect();
+        el.style.setProperty("--mx", `${e.clientX - r.left}px`);
+        el.style.setProperty("--my", `${e.clientY - r.top}px`);
+      });
+    });
+  }
+
   /* ---------- Hero typing effect ---------- */
   const phrases = [
-    "scalable backends.", "AI-driven QA tools.", "payment gateways.",
+    "scalable backends.", "RAG that cites its sources.", "AI-driven QA tools.", "payment gateways.",
     "Spring Boot microservices.", "fast apps in React.", "teams that ship."
   ];
   const typedEl = $("#typed");
@@ -268,11 +279,12 @@
     termBody.scrollTop = termBody.scrollHeight;
   };
   const commands = {
-    help: () => `Available: <span class="pl">about, skills, experience, projects, social, school, game, clear, sudo, exit</span>`,
+    help: () => `Available: <span class="pl">about, skills, experience, projects, codeatlas, social, school, game, clear, sudo, exit</span>`,
     about: () => "Aakash Siwach — Project Lead / SDE II, 5+ yrs. Java · Spring Boot · Python/FastAPI · React · AWS · AI agents. Based in Gurugram, India.",
-    skills: () => "Java/Spring Boot, Microservices, Python/FastAPI, React/TS, Node.js, Playwright, AI agents, MCP, AWS, SQL+NoSQL, Docker, CI/CD.",
+    skills: () => "Java/Spring Boot, Microservices, Python/FastAPI, React/TS, Node.js, Playwright, AI agents, MCP, RAG (hybrid search, rerankers, Qdrant), AWS, SQL+NoSQL, Docker, CI/CD.",
     experience: () => "SDE II / Project Lead @ Innostax (Jun 2025–now) · SDE I (2022–2025) · Associate SE (2022) · Paramarsh Informatics (2021–2022).",
-    projects: () => "Tendable (lead) · AI-driven QA Scanner · Bancstac payments · SafariNow · TravelStart · New Era World School (live).",
+    projects: () => '<a href="https://github.com/aakashsiwach/codeatlas-rag" target="_blank" rel="noopener">CodeAtlas</a> (RAG for Java codebases) · Tendable (lead) · AI-driven QA Scanner · Bancstac payments · SafariNow · TravelStart · New Era World School (live).',
+    codeatlas: () => { document.querySelector("#codeatlas")?.scrollIntoView({ behavior: "smooth" }); return 'RAG for Java codebases with file-and-line citations → <a href="https://github.com/aakashsiwach/codeatlas-rag" target="_blank" rel="noopener">github.com/aakashsiwach/codeatlas-rag</a>'; },
     social: () => 'github.com/aakashsiwach · linkedin.com/in/aakashsiwach',
     school: () => 'I build & maintain → <a href="https://neweraworldschool.in/" target="_blank" rel="noopener">neweraworldschool.in</a>',
     game: () => { document.querySelector("#games").scrollIntoView({ behavior: "smooth" }); return "Loading games… 🎮"; },
