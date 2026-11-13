@@ -4,6 +4,7 @@ Animated, SEO-optimized personal portfolio built with **vanilla HTML, CSS & Java
 
 ## ✨ Features
 
+- **Modern UI** — floating glass navbar, gradient-bordered cards with a pointer-following spotlight, grid backdrop.
 - **Animation** — particle-network canvas background, hero typing effect, scroll-reveal, animated counters & skill bars, shimmer gradients.
 - **Technical** — semantic HTML, accessible markup, `prefers-reduced-motion` support, theme toggle (dark/light, persisted), mobile nav, scroll-progress bar.
 - **SEO** — full meta tags, Open Graph + Twitter cards, JSON-LD `Person` structured data, `sitemap.xml`, `robots.txt`, canonical URL, web manifest, OG cover image.
@@ -13,6 +14,7 @@ Animated, SEO-optimized personal portfolio built with **vanilla HTML, CSS & Java
   - ⌨️ **Code Typing Speed Test** — WPM + accuracy on real code snippets.
   - 🃏 **Tech Memory Match** — flip-card matching of tech logos.
   - Hidden **terminal** (press `~`, type `help`) and the **Konami code** (`↑↑↓↓←→←→BA`) confetti.
+- **Featured build** — a dedicated section for [CodeAtlas](https://github.com/aakashsiwach/codeatlas-rag), an open-source RAG assistant for Java/Spring Boot codebases with file-and-line citations, hybrid retrieval, reranking, a code graph and a held-out evaluation.
 - **Live project** — links to [neweraworldschool.in](https://neweraworldschool.in/), which Aakash builds & maintains.
 
 ## 📂 Structure
