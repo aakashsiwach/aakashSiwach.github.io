@@ -28,7 +28,8 @@ Animated, SEO-optimized personal portfolio built with **vanilla HTML, CSS & Java
 ├── site.webmanifest        # PWA / install metadata
 ├── .nojekyll               # serve assets/ untouched on Pages
 └── assets/
-    ├── Aakash_Siwach_Resume.pdf  # downloadable resume
+    ├── Aakash_Siwach_Resume.pdf  # downloadable resume (AI Engineer)
+    ├── Aakash_Siwach_Resume_Full_Stack.pdf  # full-stack resume
     ├── Aakash_Siwach_Cover_Letter.pdf  # cover letter
     ├── css/style.css       # all styling + design tokens
     ├── js/main.js          # animations, nav, theme, terminal, easter eggs
