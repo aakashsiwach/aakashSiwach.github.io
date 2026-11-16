@@ -283,7 +283,7 @@
     about: () => "Aakash Siwach — Project Lead / SDE II, 5+ yrs. Java · Spring Boot · Python/FastAPI · React · AWS · AI agents. Based in Gurugram, India.",
     skills: () => "Java/Spring Boot, Microservices, Python/FastAPI, React/TS, Node.js, Playwright, AI agents, MCP, RAG (hybrid search, rerankers, Qdrant), AWS, SQL+NoSQL, Docker, CI/CD.",
     experience: () => "SDE II / Project Lead @ Innostax (Jun 2025–now) · SDE I (2022–2025) · Associate SE (2022) · Paramarsh Informatics (2021–2022).",
-    projects: () => '<a href="https://github.com/aakashsiwach/codeatlas-rag" target="_blank" rel="noopener">CodeAtlas</a> (RAG for Java codebases) · Tendable (lead) · AI-driven QA Scanner · Bancstac payments · SafariNow · TravelStart · New Era World School (live).',
+    projects: () => '<a href="https://github.com/aakashsiwach/codeatlas-rag" target="_blank" rel="noopener">CodeAtlas</a> (RAG for Java codebases) · Tendable (lead) · AI-driven QA Scanner · dev-harness (Claude Code plugin) · Bancstac payments · SafariNow · TravelStart · New Era World School (live).',
     codeatlas: () => { document.querySelector("#codeatlas")?.scrollIntoView({ behavior: "smooth" }); return 'RAG for Java codebases with file-and-line citations → <a href="https://github.com/aakashsiwach/codeatlas-rag" target="_blank" rel="noopener">github.com/aakashsiwach/codeatlas-rag</a>'; },
     social: () => 'github.com/aakashsiwach · linkedin.com/in/aakashsiwach',
     school: () => 'I build & maintain → <a href="https://neweraworldschool.in/" target="_blank" rel="noopener">neweraworldschool.in</a>',
